@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "380895652066",
+    "firebase_url": "https://coronavirus-tracker-4c6c6.firebaseio.com",
+    "project_id": "coronavirus-tracker-4c6c6",
+    "storage_bucket": "coronavirus-tracker-4c6c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380895652066:android:ea3ce075d16fc22253d6bb",
+        "android_client_info": {
+          "package_name": "com.digiwrecks.coronavirus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380895652066-cdctscl9lba3ipah0uod8mi0i340k5ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdrDMRdfvCd3N0VGdHFs2WwUmK0D4U5xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380895652066-cdctscl9lba3ipah0uod8mi0i340k5ar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380895652066:android:622ea588ed59557a53d6bb",
+        "android_client_info": {
+          "package_name": "com.digiwrecks.covidalertpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380895652066-cdctscl9lba3ipah0uod8mi0i340k5ar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdrDMRdfvCd3N0VGdHFs2WwUmK0D4U5xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380895652066-cdctscl9lba3ipah0uod8mi0i340k5ar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
