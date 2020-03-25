@@ -91,8 +91,8 @@ class _StaticsState extends State<Statics> {
           SizedBox(height: 20,),
           CupertinoSlidingSegmentedControl(
             children: {
-              0: Text('Contacted',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
-              1: Text('Recorded',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
+              0: Text(language=='English'?'Contacted':'Contacto',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
+              1: Text(language=='English'?'Recorded':'Todos',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
             },
             onValueChanged: (value) {
               setState(() {
