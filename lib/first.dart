@@ -33,7 +33,7 @@ class _FirstPageState extends State<FirstPage> {
     language = prefs.getString('language');
     if(infected == false){
       setState(() {
-        infectText = language=='English'?"I'm Infected":"Estoy Infectado";
+        infectText = language=='English'?"Change status to... I'm Infected":"Cambiar estatus a... Estoy Infectado";
         infectStatus = language=='English'?"Not Infected":"No Infectado";
         infectColor = Color(0xffD32F2F);
         infectStColor = Colors.green;
@@ -41,7 +41,7 @@ class _FirstPageState extends State<FirstPage> {
     }
     else{
       setState(() {
-        infectText = language=='English'?"I'm not Infected":"No estoy infectado";
+        infectText = language=='English'?"Change status to... I'm not Infected":"Cambiar estatus a... No estoy infectado";
         infectStatus = language=='English'?"Infected":"Infectado";
         infectColor = Color(0xff0D47A1);
         infectStColor = Color(0xffD32F2F);
@@ -77,7 +77,7 @@ class _FirstPageState extends State<FirstPage> {
   }
 
   _onAddMarkerButtonPressed() async {
-    ToastBar(text: 'Please wait...!',color: Colors.orange).show();
+    ToastBar(text: language=='English'?'Please wait...':'Por favor espera...',color: Colors.orange).show();
     await getLocation();
     try{
       SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -91,10 +91,10 @@ class _FirstPageState extends State<FirstPage> {
         'infected': false,
         'date': date
       });
-      ToastBar(text: 'Location Added!',color: Colors.green).show();
+      ToastBar(text: language=='English'?'Location Added!':'Ubicación agregada',color: Colors.green).show();
     }
     catch(e){
-      ToastBar(text: 'Something went wrong!',color: Colors.red).show();
+      ToastBar(text: language=='English'?'Something went wrong!':'Algo salió mal',color: Colors.red).show();
     }
   }
 
@@ -113,10 +113,10 @@ class _FirstPageState extends State<FirstPage> {
           Firestore.instance.collection('locations').document(locations[i].documentID).updateData({
             'infected': true
           });
-          ToastBar(text: 'Markers Added!',color: Colors.green).show();
+          ToastBar(text: language=='English'?'Markers Added!':'Marcadores añadidos',color: Colors.green).show();
         }
         catch(e){
-          ToastBar(text: 'Something went wrong!',color: Colors.red).show();
+          ToastBar(text: language=='English'?'Something went wrong!':'Algo salió mal',color: Colors.red).show();
         }
       }
     }
@@ -132,10 +132,10 @@ class _FirstPageState extends State<FirstPage> {
           Firestore.instance.collection('locations').document(locations[i].documentID).updateData({
             'infected': false
           });
-          ToastBar(text: 'Data Updated!',color: Colors.green).show();
+          ToastBar(text: language=='English'?'Data Updated!':'Datos actualizados',color: Colors.green).show();
         }
         catch(e){
-          ToastBar(text: 'Something went wrong!',color: Colors.red).show();
+          ToastBar(text: language=='English'?'Something went wrong!':'Algo salió mal',color: Colors.red).show();
         }
 
     }
@@ -159,7 +159,7 @@ class _FirstPageState extends State<FirstPage> {
                 if(infected==false){
                   onInfected();
                   setState(() {
-                      infectText = language=='English'?"I'm not Infected":"No estoy infectado";
+                      infectText = language=='English'?"Change status to... I'm not Infected":"Cambiar estatus a... No estoy infectado";
                       pre = ' not';
                       infected = true;
                       infectStatus = language=='English'?"Infected":"Infectado";
@@ -170,7 +170,7 @@ class _FirstPageState extends State<FirstPage> {
                 }else{
                   onNotInfected();
                   setState(() {
-                    infectText = language=='English'?"I'm Infected":"Estoy Infectado";
+                    infectText = language=='English'?"Change status to... I'm Infected":"Cambiar estatus a... Estoy Infectado";
                     pre= '';
                     infected = false;
                     infectStatus = language=='English'?"Not Infected":"No Infectado";
@@ -255,7 +255,7 @@ class _FirstPageState extends State<FirstPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(0,10,0,0),
               child: Text(language=='English'?"Current Status: $infectStatus":
-              "Estado actual",
+              "Estado actual: $infectStatus",
                 style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: infectStColor),textAlign: TextAlign.center,),
             ),
             infectText!=null?Padding(

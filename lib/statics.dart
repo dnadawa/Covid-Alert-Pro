@@ -92,7 +92,7 @@ class _StaticsState extends State<Statics> {
           CupertinoSlidingSegmentedControl(
             children: {
               0: Text(language=='English'?'Contacted':'Contacto',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
-              1: Text(language=='English'?'Recorded':'Todos',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
+              1: Text(language=='English'?'Recorded':'Mis registros',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17,color: Colors.white),),
             },
             onValueChanged: (value) {
               setState(() {
@@ -110,8 +110,9 @@ class _StaticsState extends State<Statics> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(18),
-                  child: Text(language=='English'?'This is the places that you and  infected people contact with each others':
-                    'Este lugar no estuvo infectado en la fecha seleccionada!'
+                  child: Text(language=='English'?"This is the places that you and  infected people contact with each others\n"
+                      "Please read 'How to use the application'":
+                    "Este lugar no estuvo infectado en la fecha seleccionada!\nFavor de leer 'Como usar la aplicación'"
                     ,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                 ),
 
