@@ -149,7 +149,7 @@ class _FirstPageState extends State<FirstPage> {
         // return object of type Dialog
         return AlertDialog(
           title: new Text(language=='English'?"Confirm":"Confirmar"),
-          content: new Text(language=='English'?"Are you sure you are$pre infected?":"Estás seguro de$pre estar infectado?"),
+          content: new Text(language=='English'?"Are you sure you want to change your status?":"Estás seguro de querer cambiar tu estatus?"),
           actions: <Widget>[
             FlatButton(
               color: Theme.of(context).primaryColor,
@@ -241,7 +241,7 @@ class _FirstPageState extends State<FirstPage> {
                 child: CircleAvatar(
                   radius: 60,
                   backgroundColor: Colors.green,
-                  child: Text(language=='English'?'Add Your\nNew\nLocation':'Añadir\nNueva\nlocalizacion',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),),
+                  child: Text(language=='English'?'Add your\nnew\nlocation':'Añadir\nnueva\nlocalización',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),),),
               ),
             ),
 
@@ -332,7 +332,7 @@ class _FirstPageState extends State<FirstPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(50,30,50,30),
               child: GestureDetector(
-                onTap: ()=>_launchURL('https://drive.google.com/open?id=107vp0DfuOLwrZnOLGBB2kRc4Yo2Nm3OO'),
+                onTap: ()=>_launchURL('https://drive.google.com/open?id=1qsPpC96B8y624PSPWRY3sifDuSI6Srdi'),
                 child: Container(
                     width: double.infinity,
                     height: 50,

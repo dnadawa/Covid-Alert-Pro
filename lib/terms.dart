@@ -135,7 +135,7 @@ class _TermsState extends State<Terms> with SingleTickerProviderStateMixin {
               Column(
                 children: <Widget>[
                   SizedBox(height: 10,),
-                  Text('Terminos y condiciones\n(Resumen)',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+                  Text('Términos y condiciones\n(Resumen)',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Text('Esta aplicación está diseñada para evitar que COVID-19 continúe propagándose.'
@@ -143,7 +143,7 @@ class _TermsState extends State<Terms> with SingleTickerProviderStateMixin {
                         ' Es muy importante usarlo sabia y responsablemente para tener datos precisos para ser más confiables (no es un juego). '
                         '\nCOVID Alert no se hace responsable de los datos registrados por los usuarios.'
                         ' Los datos proporcionados por esta aplicación solo tienen como objetivo informar y no crear pánico, problemas de salud o problemas financieros. '
-                        'El uso de esta aplicacion es de quien lo usa.',
+                        'El uso de esta aplicación es responsabilidad de quien la usa.',
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
