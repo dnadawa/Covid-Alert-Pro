@@ -219,7 +219,8 @@ class _FirstPageState extends State<FirstPage> {
         title: Text('Covid Alert',style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.call_missed_outgoing), onPressed: ()=>_launchURL('https://coronavirus.app/'))
+          IconButton(icon: Icon(Icons.call_missed_outgoing), onPressed: ()=>_launchURL('https://coronavirus.app/')),
+          IconButton(icon: Icon(Icons.monetization_on), onPressed: ()=>_launchURL('https://techarvel.wixsite.com/covid-19alert')),
         ],
       ),
       body: SingleChildScrollView(
